@@ -3,17 +3,30 @@ import { Link } from "react-router-dom";
 
 class Header extends Component {
     render() {
+        const { user } = this.props;
         return (
             <div>
                 <h1>
                     도서구매
+                    </h1>
                     <ul>
                         <li>
                             <Link  to="/">Main</Link>
                         </li>
-                        <li>
-                            <Link to="/auth">Auth</Link>
-                        </li>
+                        {
+                            user === undefined ? 
+                            (                        <li>
+                                <Link to="/auth">Auth</Link>
+                            </li>
+                            )
+                            :
+                            (
+                                <li>
+                                    {user.memberName}
+                                </li>
+                            )
+                        }
+
                         <li>
                             <Link to="/book">Book</Link>
                         </li>
@@ -24,7 +37,7 @@ class Header extends Component {
                             <Link to="/basket">Basket</Link>
                         </li>
                     </ul>
-                </h1>
+                
             </div>
         );
     }
