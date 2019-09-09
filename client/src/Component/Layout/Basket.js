@@ -4,7 +4,7 @@ class Basket extends Component {
     render() {
         return (
             <div>
-                Basket
+                <h1>히히 장바구니지롱</h1>
             </div>
         );
     }
