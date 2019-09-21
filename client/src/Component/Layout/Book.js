@@ -1,14 +1,5 @@
 import React, { Component } from "react";
 
-const styles = {
-  Form : {
-      margin : 55
-  },
-  Input : { 
-          margin : 2,
-          display:'flex'
-  }
-}
 class Book extends Component {
   constructor(props) {
     super(props);
@@ -40,12 +31,12 @@ class Book extends Component {
     //const { bookList } = this.props;
     return (
       <div>
-        <form onSubmit={this.insertBook} style={styles.Form}>
+        <form onSubmit={this.insertBook}>
           <h4>도서 등록</h4>
-          <input style={styles.Input}  name="bookName" value={bookName} placeholder="책 제목" onChange={this._InputHandler}/>
-          <input style={styles.Input} name="bookPrice" value={bookPrice}  onChange={this._InputHandler}/>
-          <input style={styles.Input} name="bookAuthor" value={bookAuthor} placeholder="저자" onChange={this._InputHandler}/>
-          <input style={styles.Input} type="submit" value="등록" />
+          <input   name="bookName" value={bookName} placeholder="책 제목" onChange={this._InputHandler}/>
+          <input  name="bookPrice" value={bookPrice}  onChange={this._InputHandler}/>
+          <input  name="bookAuthor" value={bookAuthor} placeholder="저자" onChange={this._InputHandler}/>
+          <input  type="submit" value="등록" />
         </form>
         {/* {bookList.map(item => ( */}
           {/* <div>{item.bookName}</div> */}

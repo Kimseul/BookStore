@@ -1,15 +1,6 @@
 import React, { Component } from 'react';
 
-const styles = {
-    Form : {
-        margin : 55,
-        paddingLeft : 5
-    },
-    Input : { 
-            margin : 5,
-            display:'flex'
-    }
-}
+
 class Auth extends Component {
     constructor(props){
         super(props);
@@ -54,19 +45,19 @@ class Auth extends Component {
         const { memberID, memberPassword, membername ,ID,Password } = this.state;
         return (
             <div>
-                <form onSubmit={this.insertMember} style={styles.Form}>
+                <form onSubmit={this.insertMember}>
                 <h3>회원 가입</h3>
-                      <input style={styles.Input}  name="memberID" placeholder="아이디"  value={memberID} onChange={this._InputHandler}/>
-                      <input style={styles.Input} name="memberPassword" placeholder="비밀번호"  value={memberPassword} onChange={this._InputHandler}/>
-                      <input style={styles.Input} name="membername" placeholder="이름"  value={membername} onChange={this._InputHandler}/>
-                      <input style={styles.Input} type="submit" value="회원가입"/>
+                      <input  name="memberID" placeholder="아이디"  value={memberID} onChange={this._InputHandler}/>
+                      <input  name="memberPassword" placeholder="비밀번호"  value={memberPassword} onChange={this._InputHandler}/>
+                      <input  name="membername" placeholder="이름"  value={membername} onChange={this._InputHandler}/>
+                      <input  type="submit" value="회원가입"/>
                 </form>
 
-                <form onSubmit={this.insertinfor} style={styles.Form}>
+                <form onSubmit={this.insertinfor} >
                        <h4>로그인</h4>
-                       <input style={styles.Input}  name="ID" placeholder="아이디"  value={ID} onChange={this._InputHandler}/>
-                       <input style={styles.Input} name="Password" placeholder="비밀번호"  value={Password} onChange={this._InputHandler} />
-                       <input style={styles.Input} type="submit" value="로그인"/>
+                       <input  name="ID" placeholder="아이디"  value={ID} onChange={this._InputHandler}/>
+                       <input  name="Password" placeholder="비밀번호"  value={Password} onChange={this._InputHandler} />
+                       <input  type="submit" value="로그인"/>
                 </form>
                  
             </div>

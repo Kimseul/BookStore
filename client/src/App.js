@@ -13,8 +13,8 @@ class App extends Component {
     };
   }
 
-  componentWillMount() {
-    this.getBook();
+  componentWillMount() { //react v16.3 이전에 사용
+    this.getBook();      //react v16.3 이후에는 getDerivedStateFromProps()사용
     this.getMembers();
     this.getinfor();
   }
